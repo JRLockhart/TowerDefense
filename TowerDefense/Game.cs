@@ -6,7 +6,7 @@ namespace TowerDefense
 {
     class Game
     {
-        public void Main()
+        public static void Main()
         {
             
             Map map = new Map(8, 5);
@@ -24,6 +24,29 @@ namespace TowerDefense
                     new MapLocation(7, 2, map)
                     
                 };
+
+                Invader[] invaders = 
+                {
+                    new Invader(path),
+                    new Invader(path),
+                    new Invader(path),
+                    new Invader(path)
+                };
+
+                Tower[] towers = 
+                {
+                    new towers(new MapLocation(1, 2, map)),
+                    new towers(new MapLocation(1, 2, map)),
+                    new towers(new MapLocation(1, 2, map))
+                };
+                Level level = new Level(invaders);
+                {
+                    towers = towers;
+                };
+
+                bool playerWon = level.Play();
+
+
             }
             catch(OutOfBoundsException ex)
             {
