@@ -8,6 +8,8 @@ namespace TowerDefense
     {
         protected override int Range { get; } = 3;
 
+        public override int Health {get; protected set; } = 2;
+
         public LongRangeTower(Path path) : base(path)
         {
 
